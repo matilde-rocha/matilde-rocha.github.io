@@ -1,0 +1,171 @@
+/* ---------- 1. VARIABLES: change your colours and fonts here ---------- */
+:root {
+  --bg: #fafaf7;          /* page background */
+  --text: #1f2933;        /* main text colour */
+  --muted: #5f6b76;       /* softer text (dates, taglines) */
+  --accent: #2563eb;      /* links and buttons */
+  --card-bg: #ffffff;     /* background of project cards */
+  --border: #e4e7eb;      /* thin lines around things */
+  --font: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- 2. RESET: remove the browser's default spacing ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;   /* smooth scrolling when clicking menu links */
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- 3. LAYOUT: keep content in a readable column ---------- */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* ---------- 4. HEADER / NAVIGATION ---------- */
+.site-header {
+  position: sticky;          /* stays at the top while scrolling */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-header nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- 5. HERO (top banner) ---------- */
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);  /* scales with screen size */
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- 6. PROJECT CARDS ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* as many columns as fit */
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* ---------- 7. EXPERIENCE TIMELINE ---------- */
+.timeline {
+  list-style: none;
+}
+
+.timeline li {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 1.75rem;
+}
+
+.date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- 8. FOOTER ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- 9. MOBILE: adjust for small screens ---------- */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .site-header nav a {
+    margin: 0 0.6rem;
+  }
+  section {
+    padding: 3rem 1.25rem;
+  }
+}
