@@ -90,7 +90,7 @@ a {
 .tagline {
   font-size: 1.2rem;
   color: var(--muted);
-  max-width: 600px;
+  max-width: 100%;
   margin-bottom: 2rem;
 }
 
