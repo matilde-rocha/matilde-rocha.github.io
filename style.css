@@ -29,7 +29,7 @@ body {
 
 /* ---------- 3. LAYOUT: keep content in a readable column ---------- */
 section {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
