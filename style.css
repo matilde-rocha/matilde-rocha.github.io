@@ -83,6 +83,10 @@ a {
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  background: #e8ebe6;
+  box-shadow: 0 0 0 100vmax #e8ebe6;
+  clip-path: inset(0 -100vmax);
 }
 
 .hero h1 {
