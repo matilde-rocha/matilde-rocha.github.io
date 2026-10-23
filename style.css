@@ -55,9 +55,8 @@ a {
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;             /* lets the name block fill the full height */
-  min-height: 4rem;                 /* height of the bar */
-  padding: 0 1.5rem 0 0;            /* no padding on top, bottom or left */
+  align-items: center;
+  padding: 1rem 1.5rem;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 10;
