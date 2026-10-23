@@ -64,18 +64,20 @@ a {
 }
 
 .logo {
-  display: flex;
-  align-items: center;              /* keeps the name centred inside the green block */
-  padding: 0 1.75rem;               /* space left and right of the name */
-  background: var(--accent);        /* green, same as your button */
-  color: #1f2933;                   /* black letters */
+  font-size: 1.4rem;
   font-weight: 700;
+  color: var(--text);
   text-decoration: none;
 }
 
-.site-header nav {
-  display: flex;
-  align-items: center;              /* keeps the menu centred in the bar */
+.logo::before {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 0.6rem;
 }
 
 .logo:hover {
