@@ -6,7 +6,7 @@
   --accent: #9caf88;      /* links and buttons */
   --card-bg: #ffffff;     /* background of project cards */
   --border: #e4e7eb;      /* thin lines around things */
-  --font: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --font: "Bricolage Grotesque", system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
 /* ---------- 2. RESET: remove the browser's default spacing ---------- */
