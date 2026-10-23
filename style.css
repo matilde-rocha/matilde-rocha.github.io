@@ -51,25 +51,31 @@ a {
 
 /* ---------- 4. HEADER / NAVIGATION ---------- */
 .site-header {
-  position: sticky;          /* stays at the top while scrolling */
+  position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
+  align-items: stretch;             /* lets the name block fill the full height */
+  min-height: 4rem;                 /* height of the bar */
+  padding: 0 1.5rem 0 0;            /* no padding on top, bottom or left */
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 10;
 }
 
 .logo {
-  display: inline-block;
-  padding: 0.5rem 1.1rem;
-  background: var(--accent);        /* same green as your "See my work" button */
+  display: flex;
+  align-items: center;              /* keeps the name centred inside the green block */
+  padding: 0 1.75rem;               /* space left and right of the name */
+  background: var(--accent);        /* green, same as your button */
   color: #1f2933;                   /* black letters */
-  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;              /* keeps the menu centred in the bar */
 }
 
 .logo:hover {
