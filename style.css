@@ -40,7 +40,9 @@ h1, h2, h3 {
 
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;                 /* space between the title and the line */
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--accent); /* thin green line */
 }
 
 a {
