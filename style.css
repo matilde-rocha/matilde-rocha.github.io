@@ -63,9 +63,17 @@ a {
 }
 
 .logo {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  background: var(--accent);        /* same green as your "See my work" button */
+  color: #1f2933;                   /* black letters */
+  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
-  color: var(--text);
+}
+
+.logo:hover {
+  opacity: 0.9;
 }
 
 .site-header nav a {
