@@ -237,6 +237,68 @@ a {
   color: var(--muted);
 }
 
+/* ---------- Vertical timeline inside an experience ---------- */
+.vtimeline {
+  padding-left: 2.5rem;
+}
+
+.vt-item {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+
+.vt-item:last-child {
+  padding-bottom: 0;
+}
+
+/* the circle on the line */
+.vt-item::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 0.1rem;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: #e8ebe6;               /* same grey as the box, so the ring looks hollow */
+}
+
+/* the dotted green line between one circle and the next */
+.vt-item::after {
+  content: "";
+  position: absolute;
+  left: calc(-2.5rem + 6.5px);
+  top: calc(0.1rem + 18px + 5px);
+  bottom: 5px;
+  width: 5px;
+  background: radial-gradient(circle, var(--accent) 2.5px, transparent 3px) center top / 5px 12px repeat-y;
+}
+
+.vt-item:last-child::after {
+  display: none;                     /* no line after the last circle */
+}
+
+.vt-date {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.vt-event {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6f8a5f;                    /* deeper sage, easier to read */
+  margin: 0.1rem 0 0.35rem;
+}
+
+.vt-text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* ---------- 8. FOOTER ---------- */
 .site-footer {
   text-align: center;
