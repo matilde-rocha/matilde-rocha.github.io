@@ -269,11 +269,17 @@ a {
 .vt-item::after {
   content: "";
   position: absolute;
-  left: calc(-2.5rem + 6.5px);
+  left: calc(-2.5rem + 8px);          /* keeps the line centred under the circles */
   top: calc(0.1rem + 18px + 5px);
   bottom: 5px;
-  width: 5px;
-  background: radial-gradient(circle, var(--accent) 2.5px, transparent 3px) center top / 5px 12px repeat-y;
+  width: 2px;                         /* thinner line */
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--accent) 0,
+    var(--accent) 10px,               /* length of each dash */
+    transparent 10px,
+    transparent 16px                  /* each dash + gap = 16px, so the gap is 6px */
+  );
 }
 
 .vt-item:last-child::after {
