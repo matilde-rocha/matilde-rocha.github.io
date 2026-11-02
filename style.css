@@ -305,6 +305,83 @@ a {
   color: var(--muted);
 }
 
+/*-------PROJECT CAROUSSEL-------*/
+
+.carousel {
+  position: relative;               /* the arrows are positioned inside this */
+}
+
+.cards {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 calc((100% - 2.5rem) / 3);   /* exactly 3 cards per view */
+  scroll-snap-align: start;
+}
+
+/* the round, semi-transparent grey button */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(170, 175, 180, 0.6);  /* light grey, semi-transparent */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.arrow:hover {
+  background: rgba(150, 156, 162, 0.85);
+}
+
+.arrow-left  { left: -1.25rem; }
+.arrow-right { right: -1.25rem; }
+
+/* the white arrow head (no stem) */
+.arrow::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+}
+
+.arrow-right::before {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.arrow-left::before {
+  transform: translateX(2px) rotate(-135deg);
+}
+
+/* hide the arrow when there's nothing more to see in that direction */
+.arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .card {
+    flex-basis: 100%;                    /* one card at a time on phones */
+  }
+}
+
 /* ---------- 8. FOOTER ---------- */
 .site-footer {
   text-align: center;
